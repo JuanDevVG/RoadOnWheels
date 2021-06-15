@@ -1,0 +1,253 @@
+:root {
+    --primario: #73A605;
+    --secundario: rgba(0, 0, 0, 0.75);
+    --terciario: #F2522E;
+    --blanco: #FFFFFF;
+    --blancoTransparente: rgba(255, 255, 255, 0.7);
+    --blancoMenosTransparente: rgba(255, 255, 255, 0.8);
+    --negro: #000000;
+
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    
+    /*Ubicación de la imagen */
+    background-image: url(../img/fondo.jpg);
+    /*Para dejar la imagen de fondo centrada, vertical y horizontalmente*/
+    background-position: center center;
+    /* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido  */
+    background-attachment: fixed;
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador  */
+    background-size: cover;
+    /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla  */
+    background-color: var(--primario);
+    
+
+    /*la linea de abajo hace lo mismo que el codigo arriba*/
+    /*background: var(--primario) url(../img/fondo.jpg) center center cover no-repeat fixed;*/
+
+    font-family: var(--fuentePrincipal);
+}
+
+img {
+    width: 100%;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder { 
+    color: var(--negro);
+}
+
+.contenedor {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Logo pagina */
+.logo {
+    width: 130px;
+    margin: 1rem 0 0 1rem;
+    color: var(--blanco);
+    text-align: center;
+}
+.logo__img {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+.logo__text{ 
+    margin: 0;
+}
+
+/* header */
+.cabecera {
+    display: flex;
+}
+.cabecera__titulo {
+    color: var(--blanco);
+    font-size: 7rem;
+    margin: 0 auto 3rem 20%;
+}
+.cabecera__titulo--catalogo {
+    margin: 0 auto 3rem 10rem;  
+}
+.cabecera__titulo--consultar {
+    margin: 0 auto 3rem 25%;
+} 
+
+/* Navegación*/
+.navegacion {
+    background-color: var(--primario);
+    margin-bottom: 4rem;
+}
+.navegacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    list-style: none;
+}
+.navegacion__enlace {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2.2rem;
+}
+.navegacion__enlace:hover,
+.navegacion__enlace--activo {
+    color: var(--blanco);
+}
+
+/* Consultar - agregar carrito (main)*/
+.consultar-agregar__carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.consultar-carrito__form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.consultar-carrito__form__label {
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 1rem;     
+}
+.consultar-carrito__form__input {
+    background-color: var(--blancoTransparente);
+    height: 3.5rem;
+    border: 0;
+    border-radius: 10px;
+}
+.agregar__carrito {
+    color: var(--blanco);
+    font-size: 3rem;
+    font-weight: bold;
+}
+.icono-agregar {
+    fill: var(--blanco);
+}
+
+/* Carritos */
+.carritos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.carrito {
+    background-color: var(--secundario);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    border-radius: 10px;
+}
+.carrito__img {
+    padding: 1rem;
+}
+.info-carrito {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-left: .01rem solid var(--blancoTransparente);
+}
+.info-carrito__text {
+    margin: .5rem; 
+}
+
+/* formularios consultar*/
+.formularios-consultar,
+.alquilar-carrito {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+}
+.form-consultar-cliente {
+    height: 45%;
+}
+.form-consultar-renta,
+.form-consultar-cliente,
+.form-alquilar-carrito, 
+.carrito-alquilar {
+    background-color: var(--secundario);
+    border-radius: 15px;
+    padding: 2rem;
+}
+.form-renta__titulo,
+.form-cliente__titulo,
+.form-alquilar__titulo,
+.carrito-alquilar__titulo {
+    color: var(--blanco);
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+}
+.form-renta__subtitulo,
+.form-alquilar__subtitulo,
+.info-carrito__subtitulo,
+.form-renta__label,
+.form-cliente__label,
+.form-alquilar__label,
+.info-carrito__label {
+    color: var(--blanco);
+    font-size: 2rem;
+}
+.form-renta__label,
+.form-cliente__label {
+    padding: 1rem;
+}
+.form-renta__subtitulo {
+    padding: 0 1rem;
+}
+.form-renta__input,
+.form-cliente__input,
+.form-alquilar__input,
+.info-carrito__input {
+    background-color: var(--blancoMenosTransparente);
+    min-height: 3rem;
+    border: 0;
+    min-width: 40%;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.form-renta__input--placa {
+    width: 100%;
+}
+.icono-buscar {
+    fill: var(--blanco);
+}
+.form-renta__campo,
+.form-cliente__campo,
+.form-alquilar__campo,
+.info-carrito__campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Formulario alquilar*/
+.form-alquilar__boton{ 
+	width: 100%;
+	height: 4rem;
+	background: #F2522E;
+	border: 0;
+    margin-top: 1rem;
+	border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
