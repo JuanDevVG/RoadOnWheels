@@ -106,9 +106,9 @@ input[type=submit] {
 .login__boton {
 	width: 80%;
 	height: 4rem;
-	background: #F2522E;
+	background: var(--primario);
 	border: 0;
 	border-radius: .8rem;
     font-size: 2rem;
-    font-weight: bold;
+    color: var(--blanco);
 }
