@@ -208,6 +208,9 @@ input[type=submit] {
     color: var(--blanco);
     font-size: 2rem;
 }
+.info-carrito__subtitulo {
+    text-align: center;
+}
 .form-renta__label,
 .form-cliente__label {
     padding: 1rem;
