@@ -32,8 +32,8 @@
             </li>
         </ul>    
     </nav>
-    <main class="contenedor">
-        <div class="alquilar-carrito">
+    <main class="contenedor alquilar-carrito">
+        <div>
             <div class="form-alquilar-carrito">
                 <h2 class="form-alquilar__titulo">Alquilar carrito</h2>
                 <form action="#" class="form-alquilar">
@@ -75,89 +75,93 @@
                         <input class="form-alquilar__input" type="time" name="horaRenta" id="horaRenta"> 
                     </div>
                     
-                    <h3 class="form-alquilar__subtitulo">Devolucion de renta</h3>
+                    <label class="form-alquilar__label form-alquilar__label--mostrar" for="mostrarInfoDevolucion">Registrar devolucion:</label>
+                    <input class="input__mostrarInfoDevolucion" type="checkbox" name="mostrarInfoDevolucion" id="mostrarInfoDevolucion">
                     
-                    <div class="form-alquilar__campo">
-                        <label class="form-alquilar__label" for="fechaDevolucion">Fecha de Devolución</label>
-                        <input class="form-alquilar__input" type="date" name="fechaDevolucion" id="fechaDevolucion">
-                    </div>
-                    
-                    <div class="form-alquilar__campo">
-                        <label class="form-alquilar__label" for="horaDevolucion">Hora de devolución</label>
-                        <input class="form-alquilar__input" type="time" name="horaDevolucion" id="horaDevolucion">
-                    </div>
-                    
-                    <div class="form-alquilar__campo">
-                        <label class="form-alquilar__label" for="kilometraje">Kilometraje:</label>
-                        <input class="form-alquilar__input" type="number" name="kilometraje" id="kilometraje">
-                    </div>
-                    
-                    <div class="form-alquilar__campo">
-                        <label class="form-alquilar__label" for="estadoCarrito">Estado del carrito</label>
-                        <select class="form-alquilar__input" name="estadoCarrito" id="estadoCarrito">
-                            <option selected disabled>-- Seleccione Estado --</option>
-                            <option>Bueno</option>
-                            <option>Regular</option>
-                            <option>Malo</option>
-                        </select>
-                    </div>
-                    <div class="form-alquilar__campo">
-                        <label class="form-alquilar__label" for="descripcionEstado">Descripcion Estado del carrito</label>
-                        <textarea class="form-alquilar__input" name="descripcionEstado" id="descripcionEstado"></textarea>
-                    </div>
-                
+                    <div class="form-renta__devolucion"> 
+                        <h3 class="form-alquilar__subtitulo">Devolucion de renta</h3>
+                        
+                        <div class="form-alquilar__campo">
+                            <label class="form-alquilar__label" for="fechaDevolucion">Fecha de Devolución</label>
+                            <input class="form-alquilar__input" type="date" name="fechaDevolucion" id="fechaDevolucion">
+                        </div>
+                        
+                        <div class="form-alquilar__campo">
+                            <label class="form-alquilar__label" for="horaDevolucion">Hora de devolución</label>
+                            <input class="form-alquilar__input" type="time" name="horaDevolucion" id="horaDevolucion">
+                        </div>
+                        
+                        <div class="form-alquilar__campo">
+                            <label class="form-alquilar__label" for="kilometraje">Kilometraje:</label>
+                            <input class="form-alquilar__input" type="number" name="kilometraje" id="kilometraje">
+                        </div>
+                        
+                        <div class="form-alquilar__campo">
+                            <label class="form-alquilar__label" for="estadoCarrito">Estado del carrito</label>
+                            <select class="form-alquilar__input" name="estadoCarrito" id="estadoCarrito">
+                                <option selected disabled>-- Seleccione Estado --</option>
+                                <option>Bueno</option>
+                                <option>Regular</option>
+                                <option>Malo</option>
+                            </select>
+                        </div>
+                        <div class="form-alquilar__campo">
+                            <label class="form-alquilar__label" for="descripcionEstado">Descripcion Estado del carrito</label>
+                            <textarea class="form-alquilar__input" name="descripcionEstado" id="descripcionEstado"></textarea>
+                        </div>
+                   </div>
                     <input class="form-alquilar__boton" type="submit" name="alquilar" id="alquilar" value="Alquilar">
                 </form>
             </div>
-            <div class="carrito-alquilar">
-                <h2 class="carrito-alquilar__titulo">Informacion del carrito</h2>
-                <img src="img/carrito.png" alt="carrito golf">
-                <div class="info-carrito__alquilar">
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="placa">Placa:</label>
-                        <input class="info-carrito__input" type="text" name="placa" id="placa">
-                    </div>
+            </div> <!-- .alquilar-carrito -->
+        <div class="carrito-alquilar">
+            <h2 class="carrito-alquilar__titulo">Informacion del carrito</h2>
+            <img src="img/carrito.png" alt="carrito golf">
+            <div class="info-carrito__alquilar">
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="placa">Placa:</label>
+                    <input class="info-carrito__input" type="text" name="placa" id="placa">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="costoAlquiler">Costo Alquiler:</label>
-                        <input class="info-carrito__input" type="number" name="costoAlquiler" id="costoAlquiler">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="costoAlquiler">Costo Alquiler:</label>
+                    <input class="info-carrito__input" type="number" name="costoAlquiler" id="costoAlquiler">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="kilometraje">Kilometraje</label>
-                        <input class="info-carrito__input" type="number" name="kilometraje" id="kilometraje">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="kilometraje">Kilometraje</label>
+                    <input class="info-carrito__input" type="number" name="kilometraje" id="kilometraje">
+                </div>
                     
-                    <h3 class="info-carrito__subtitulo">Especificación</h3>
+                <h3 class="info-carrito__subtitulo">Especificación</h3>
 
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="color">Color:</label>
-                        <input class="info-carrito__input" type="text" name="color" id="color">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="color">Color:</label>
+                    <input class="info-carrito__input" type="text" name="color" id="color">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="numeroPasajeros">Numero de pasajeros:</label>
-                        <input class="info-carrito__input" type="number" name="numeroPasajeros" id="numeroPasajeros">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="numeroPasajeros">Numero de pasajeros:</label>
+                    <input class="info-carrito__input" type="number" name="numeroPasajeros" id="numeroPasajeros">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="cilindraje">Cilindraje:</label>
-                        <input class="info-carrito__input" type="text" name="cilindraje" id="cilindraje">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="cilindraje">Cilindraje:</label>
+                    <input class="info-carrito__input" type="text" name="cilindraje" id="cilindraje">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="velocidadMax">Velocidad Maxima:</label>
-                        <input class="info-carrito__input" type="number" name="velocidadMax" id="velocidadMax">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="velocidadMax">Velocidad Maxima:</label>
+                    <input class="info-carrito__input" type="number" name="velocidadMax" id="velocidadMax">
+                </div>
                     
-                    <div class="info-carrito__campo">
-                        <label class="info-carrito__label" for="modelo">Modelo</label>
-                        <input class="info-carrito__input" type="text" name="modelo" id="modelo">
-                    </div>
+                <div class="info-carrito__campo">
+                    <label class="info-carrito__label" for="modelo">Modelo</label>
+                    <input class="info-carrito__input" type="text" name="modelo" id="modelo">
+                </div>
                     
-                </div> <!-- .info-carrito__alquilar -->
-            </div> <!-- .carrito-alquilar -->
-        </div> <!-- .alquilar-carrito -->
+            </div> <!-- .info-carrito__alquilar -->
+        </div> <!-- .carrito-alquilar -->
     </main>
 </body>
 </html>

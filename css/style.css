@@ -122,9 +122,8 @@ input[type=submit] {
 }
 .consultar-carrito__form {
     display: flex;
-    justify-content: center;
-    align-content: center;
     align-items: center;
+    justify-content: center;
 }
 .consultar-carrito__form__label {
     color: var(--blanco);
@@ -171,28 +170,42 @@ input[type=submit] {
     margin: .5rem; 
 }
 
-/* formularios consultar*/
+/* formularios consultar - modificar*/
 .formularios-consultar,
-.alquilar-carrito {
+.alquilar-carrito,
+.formularios-modificar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 8rem;
+    gap: 5rem;
 }
 .form-consultar-cliente {
-    height: 45%;
+    height: 50%;
 }
 .form-consultar-renta,
 .form-consultar-cliente,
 .form-alquilar-carrito, 
-.carrito-alquilar {
+.carrito-alquilar,
+.form-modificar__renta,
+.form-modificar__cliente,
+.modificar-carrito {
     background-color: var(--secundario);
     border-radius: 15px;
     padding: 2rem;
 }
+.form-modificar__renta
+.form-alquilar-carrito {
+    height: auto;
+    width: 50%;
+}
+.carrito-alquilar {
+    width: 100%;
+    height: auto;
+}
 .form-renta__titulo,
 .form-cliente__titulo,
 .form-alquilar__titulo,
-.carrito-alquilar__titulo {
+.carrito-alquilar__titulo,
+.modificar-carrito__titulo {
     color: var(--blanco);
     font-size: 4rem;
     text-align: center;
@@ -230,7 +243,7 @@ input[type=submit] {
     margin: 1rem;
 }
 .form-renta__input--placa {
-    width: 100%;
+    width: 60%;
 }
 .icono-buscar {
     fill: var(--blanco);
@@ -238,13 +251,39 @@ input[type=submit] {
 .form-renta__campo,
 .form-cliente__campo,
 .form-alquilar__campo,
-.info-carrito__campo {
+.info-carrito__campo,
+.form-modificar__campo {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Desplegar informacion para la devolucion de un carrito */
+.input__mostrarInfoDevolucion {
+    width: 35%;
+    height: 3rem;
+    margin: 1rem;
+}
+.input__mostrarInfoDevolucion ~ .form-renta__devolucion {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.input__mostrarInfoDevolucion:checked + .form-renta__devolucion {
+    opacity: 1;
+    height: auto;
+}
 /* Formulario alquilar*/
-.form-alquilar__boton{ 
+.form-alquilar__label--mostrar {
+    color: var(--primario);
+    font-weight: bold;
+}
+.form-alquilar__boton,
+.buscar__boton,
+.form-renta__boton,
+.form-cliente__boton,
+.form-renta-modificar__boton { 
 	width: 100%;
 	height: 4rem;
 	background: var(--primario);
@@ -253,4 +292,15 @@ input[type=submit] {
 	border-radius: 1rem;
     font-size: 2rem;
     font-weight: bold;
+    color: var(--blanco);
+}
+.buscar__boton {
+    height: 3.7rem;
+    width: 12rem;
+    margin-left: 1rem;
+}
+.form-renta__boton {
+    height: 3.1rem;
+    margin: 0 1rem 0 0;
+    width: 30%;
 }
