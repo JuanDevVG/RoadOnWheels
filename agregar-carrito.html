@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">
+            <img class="logo__img" src="img/fondo-consultar.jpg" alt="logo pagina">
+            <p class="logo__text">Road On Wheels</p>
+        </div>
+        <h1 class="cabecera__titulo">Agregar Carrito</h1>
+    </header>
+
+    <nav class="navegacion">
+        <ul class="navegacion__enlaces contenedor">
+            <li>
+                <a class="navegacion__enlace" href="catalogo.html">Catalogo</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace" href="consultar.html">Consultar</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace" href="modificar.html">Modificar</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace" href="eliminar.html">Eliminar</a>
+            </li>
+        </ul>    
+    </nav>
+    
+    <main class="contenedor carrito-agregar">
+        <div class="agregar-carrito">
+            <form action="#" class="agregar-carrito__form">
+                <div class="form-modificar__campo">
+                    <label class="form-renta__label" for="placa">Placa:</label>
+                    <input class="form-renta__input form-renta__input--placa" type="text" name="placa" id="placa" placeholder="Ingrese la placa">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="form-renta__label" for="costoAlquiler">Costo alquiler:</label>
+                    <input class="form-renta__input" type="number" name="costoAlquiler" id="costoAlquiler">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="form-renta__label" for="imagen">Imagen:</label>
+                    <input class="form-renta__input" type="file" name="imagen" id="imagen">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="form-renta__label">Estado del vehiculo:</label>
+
+                    <select class="form-renta__input">
+                        <option selected disabled>-- Seleccione Estado --</option>
+                        <option>Bueno</option>
+                        <option>Regular</option>
+                        <option>Malo</option>
+                    </select>
+                </div>
+
+                <h3 class="info-carrito__subtitulo">Especificación</h3>
+
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="color">Color:</label>
+                    <input class="info-carrito__input" type="text" name="color" id="color">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="cilindraje">Cilindraje:</label>
+                    <input class="info-carrito__input" type="text" name="cilindraje" id="cilindraje">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="numeroPasajeros">Numero de pasajeros:</label>
+                    <input class="info-carrito__input" type="number" name="numeroPasajeros" id="numeroPasajeros">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="modelo">Modelo:</label>
+                    <input class="info-carrito__input" type="text" name="modelo" id="modelo">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="kilometraje">Kilometraje:</label>
+                    <input class="info-carrito__input" type="number" name="kilometraje" id="kilometraje">
+                </div>
+                <div class="form-modificar__campo">
+                    <label class="info-carrito__label" for="velocidadMax">Maxima velociad:</label>
+                    <input class="info-carrito__input" type="number" name="velocidadMax" id="velocidadMax">
+                </div>
+                
+                <input class="form-renta-modificar__boton" type="submit" id="modificar" name="modificar" value="Modificar">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">
+            <img class="logo__img" src="img/fondo-consultar.jpg" alt="logo pagina">
+            <p class="logo__text">Road On Wheels</p>
+        </div>
+        <h1 class="cabecera__titulo cabecera__titulo--consultar">Eliminar</h1>
+    </header>
+
+    <nav class="navegacion">
+        <ul class="navegacion__enlaces contenedor">
+            <li>
+                <a class="navegacion__enlace" href="catalogo.html">Catalogo</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace" href="consultar.html">Consultar</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace" href="modificar.html">Modificar</a>
+            </li>
+            <li>
+                <a class="navegacion__enlace navegacion__enlace--activo" href="eliminar.html">Eliminar</a>
+            </li>
+        </ul>    
+    </nav>
+    <main class="contenedor formularios-modificar">
+
+        <div class="form-modificar__cliente">
+            <h2 class="form-cliente__titulo" >Cliente</h2>
+            <form action="#" class="form-cliente">
+                <div class="form-cliente__campo">
+                    <label class="form-cliente__label" for="numeroLicencia">Numero de licencia:</label>
+                    <input class="form-cliente__input form-cliente__input--licencia" type="text" name="numeroLicencia" id="numeroLicencia" placeholder="Ingrese el numero de licencia">
+                </div>
+                
+                <input class="form-cliente__boton" type="submit" id="modificar" name="modificar" value="Modificar">
+            </form>
+        </div>
+
+        <div class="modificar-carrito">
+            <h2 class="modificar-carrito__titulo">Carrito</h2>
+                <form action="#" class="form-modificar__carrito">
+                    <div class="form-modificar__campo">
+                        <label class="form-renta__label" for="placa">Placa:</label>
+                        <input class="form-renta__input form-renta__input--placa" type="text" name="placa" id="placa" placeholder="Ingrese la placa">
+                    </div>
+                    
+                    <input class="form-renta-modificar__boton" type="submit" id="modificar" name="modificar" value="Modificar">
+                </form>
+        </div>
+
+        <div >
+            <div class="form-modificar__renta">
+                <h2 class="form-renta__titulo">Renta</h2>
+                <form action="#" class="form-renta">
+                    <div class="form-renta__campo">
+                        <label class="form-renta__label" for="placa">Placa:</label>
+                        <input class="form-renta__input form-renta__input--placa" type="text" name="placa" id="placa" placeholder="Ingrese la placa">
+                    </div>
+                    <div class="form-renta__campo">
+                        <label class="form-renta__label" for="numeroLicencia">Numero de licencia:</label>
+                        <input class="form-renta__input" type="text" name="numeroLicencia" id="numeroLicencia">
+                    </div>
+                    <input class="form-renta-modificar__boton" type="submit" id="buscar" name="buscar" value="Buscar">
+                </form>
+            </div> <!-- .form-modificar__renta -->
+        </div> 
+    </main>
+</body>
+</html>

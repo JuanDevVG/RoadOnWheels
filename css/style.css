@@ -187,10 +187,19 @@ input[type=submit] {
 .carrito-alquilar,
 .form-modificar__renta,
 .form-modificar__cliente,
-.modificar-carrito {
+.modificar-carrito,
+.agregar-carrito {
     background-color: var(--secundario);
     border-radius: 15px;
     padding: 2rem;
+}
+.agregar-carrito {
+    width: 45%;
+    margin-bottom: 4rem;
+}
+.carrito-agregar {
+    display: flex;
+    justify-content: center;
 }
 .form-modificar__renta
 .form-alquilar-carrito {
