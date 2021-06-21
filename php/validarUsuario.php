@@ -10,5 +10,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
     } else {
         header('Location: ../index.html');
     }
+} else {
+    header('Location: ../index.html');
 }
 
