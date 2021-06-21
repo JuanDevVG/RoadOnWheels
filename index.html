@@ -20,12 +20,12 @@
     </header>
     <main class="contenedor">
         <div class="login">
-            <form action="#" class="login__formulario">
+            <form action="php/validarUsuario.php" method="POST" class="login__formulario">
                 <div>
-                    <svg class="login__icono" xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 24 24"><path class="login__icono" d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h1 1 14H20z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 24 24"><path class="login__icono" d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h1 1 14H20z"/></svg>
                 </div>
-                <input class="login__campo" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">            
-                <input class="login__campo" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">            
+                <input class="login__campo" type="text" name="username" id="username" placeholder="Nombre de Usuario">            
+                <input class="login__campo" type="password" name="password" id="password" placeholder="Contraseña">            
                 <input class="login__boton" type="submit" name="ingresar" id="ingresar" value="Ingresar">
             </form>
         </div>
