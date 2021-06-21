@@ -266,6 +266,16 @@ input[type=submit] {
     justify-content: space-between;
     align-items: center;
 }
+.info-carrito__campo--disponibilidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    margin: 0 1rem;
+}
+.info-carrito__input--radio {
+    width: 100%;
+}
 
 /* Desplegar informacion para la devolucion de un carrito */
 .input__mostrarInfoDevolucion {
