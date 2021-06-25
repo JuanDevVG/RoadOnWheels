@@ -80,18 +80,15 @@ input[type=submit] {
 /* header */
 .cabecera {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 .cabecera__titulo {
     color: var(--blanco);
     font-size: 7rem;
-    margin: 0 auto 3rem 20%;
+    margin: 0;
 }
-.cabecera__titulo--catalogo {
-    margin: 0 auto 3rem 10rem;  
-}
-.cabecera__titulo--consultar {
-    margin: 0 auto 3rem 25%;
-} 
 
 /* Navegación*/
 .navegacion {
