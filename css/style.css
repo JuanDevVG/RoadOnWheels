@@ -262,7 +262,7 @@ input[type=submit] {
     margin: 1rem;
 }
 .form-renta__input--placa {
-    width: 60%;
+    width: 65%;
 }
 .icono-buscar {
     fill: var(--blanco);

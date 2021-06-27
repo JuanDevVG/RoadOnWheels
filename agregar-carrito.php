@@ -1,3 +1,7 @@
+<?php
+    require 'php/Carrito.php'; 
+    $carrito = new Carrito();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,10 +44,9 @@
             </li>
         </ul>    
     </nav>
-    
     <main class="contenedor carrito-agregar">
         <div class="agregar-carrito">
-            <form action="#" class="agregar-carrito__form">
+            <form action="" class="agregar-carrito__form" method="POST">
                 <div class="form-modificar__campo">
                     <label class="form-renta__label" for="placa">Placa:</label>
                     <input class="form-renta__input form-renta__input--placa" type="text" name="placa" id="placa" placeholder="Ingrese la placa">
@@ -59,7 +62,7 @@
                 <div class="form-modificar__campo">
                     <label class="form-renta__label">Estado del vehiculo:</label>
 
-                    <select class="form-renta__input">
+                    <select class="form-renta__input" name="estadoVehiculo">
                         <option selected disabled>-- Seleccione Estado --</option>
                         <option>Bueno</option>
                         <option>Regular</option>
@@ -97,7 +100,7 @@
                     <label class="info-carrito__label" for="disponibilidad">Disponibilidad:</label>
                     <div class="info-carrito__campo--disponibilidad">
                         <label for="disponibilidad-si" class="info-carrito__label">Si</label>
-                        <input class="info-carrito__input info-carrito__input--radio" type="radio" name="disponibilidad" id="disponibilidad-si">
+                        <input class="info-carrito__input info-carrito__input--radio" type="radio" name="disponibilidad" id="disponibilidad-si" checked>
                         <label for="disponibilidad-no" class="info-carrito__label">No</label>
                         <input class="info-carrito__input info-carrito__input--radio" type="radio" name="disponibilidad" id="disponibilidad-no">
                     </div>
@@ -109,3 +112,36 @@
     </main>
 </body>
 </html>
+<?php 
+
+if (isset($_POST['agregar']) && !empty($_POST['placa']) && !empty($_POST['costoAlquiler']) && !empty($_POST['imagen']) && !empty($_POST['estadoVehiculo']) && !empty($_POST['color']) && !empty($_POST['cilindraje']) 
+            && !empty($_POST['numeroPasajeros'])  && !empty($_POST['modelo']) && !empty($_POST['kilometraje']) && !empty($_POST['velocidadMax']) && !empty($_POST['disponibilidad'])) { 
+
+    $datosCarrito = array("placa"=>$_POST['placa'], "costoAlquiler"=>$_POST['costoAlquiler'], "kilometraje"=>$_POST['kilometraje'], "estadoVehiculo"=>$_POST['estadoVehiculo'], "color"=>$_POST['color'], "cilindraje"=>$_POST['cilindraje'],
+                        "numPasajeros"=>$_POST['numeroPasajeros'], "modelo"=>$_POST['modelo'], "velocidadMax"=>$_POST['velocidadMax'], "FK_Especificacion"=>'');
+
+    $datosEspecificaciones = $carrito->consultarEspecificaciones();
+
+    if ($datosEspecificaciones) {
+        while ($especificacion = $datosEspecificaciones->fetch(PDO::FETCH_ASSOC)) {
+            
+            if ($especificacion["Color"] == $datosCarrito["color"] && $especificacion["Cilindraje"] == $datosCarrito["cilindraje"] && $especificacion["numPasajeros"] == $datosCarrito["numPasajeros"] &&
+                $especificacion["Modelo"] == $datosCarrito["modelo"] && $especificacion["velocidadMax"] == $datosCarrito["velocidadMax"]) {
+                
+                $datosCarrito["FK_Especificacion"] = $especificacion["Id_Especificacion"];
+            }
+        }
+        if ($datosCarrito["FK_Especificacion"]=='') {
+            $carrito->agregarEspecificacion($datosCarrito);
+            $IdUltimaEspecificacion = $carrito->consultarUltimaFilaEspecificacion(); 
+            $datosCarrito["FK_Especificacion"] = $IdUltimaEspecificacion["Id_Especificacion"];
+        } 
+    } else {
+        $carrito->agregarEspecificacion($datosCarrito);
+        $IdUltimaEspecificacion = $carrito->consultarUltimaFilaEspecificacion(); 
+        $datosCarrito["FK_Especificacion"] = $IdUltimaEspecificacion["Id_Especificacion"];
+    }
+    $carrito->agregarCarrito($datosCarrito);
+}
+
+?>
